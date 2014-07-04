@@ -21,7 +21,11 @@
   <servlet>
   	<servlet-name>springAngular</servlet-name>
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-  	<load-on-startup>1</load-on-startup>
+  	<init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>WEB-INF/spring/webmvc-config.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
   </servlet>
   
   <servlet-mapping>
@@ -29,6 +33,9 @@
   	<url-pattern>/</url-pattern>
   </servlet-mapping>
   
- 
+   <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
+  
   
 </web-app>
