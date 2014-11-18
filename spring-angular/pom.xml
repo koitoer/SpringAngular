@@ -8,14 +8,42 @@
   <name>spring-angular Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
+
+		
   	<java.version>1.6</java.version>
   	<spring.version>3.2.8.RELEASE</spring.version>
   	<junit.version>4.10</junit.version>
+  			<spring.data.version>1.6.1.RELEASE</spring.data.version>
   	<spring-data-jpa.version>1.3.1.RELEASE</spring-data-jpa.version>
+  	<jackson-json.version>2.3.3</jackson-json.version>
+  			<slf4j.version>1.6.4</slf4j.version>
+		<log4j.version>1.2.16</log4j.version>   
+		
   </properties>
   
   <dependencies>
-   
+	
+   <dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		
     <!-- Spring dependencies section -->
     <dependency>
 		<groupId>org.springframework</groupId>
@@ -32,11 +60,11 @@
 		<artifactId>spring-jdbc</artifactId>
 		<version>${spring.version}</version>
 	</dependency>
-    <dependency>
-		<groupId>org.springframework.data</groupId>
-		<artifactId>spring-data-jpa</artifactId>
-		<version>${spring-data-jpa.version}</version>
-	</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring.data.version}</version>
+		</dependency>
 	<dependency>
    		<groupId>org.springframework</groupId>
    		<artifactId>spring-orm</artifactId>
@@ -97,7 +125,21 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-    
+    <dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson-json.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson-json.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson-json.version}</version>
+		</dependency>
     
     		<!-- Dependencies JSP -->
 		<dependency>
@@ -126,6 +168,12 @@
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
+		</dependency>
+		
+			    <dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-webmvc</artifactId>
+			<version>2.1.1.RELEASE</version>
 		</dependency>
   </dependencies>
   <build>

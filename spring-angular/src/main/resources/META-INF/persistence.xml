@@ -6,6 +6,7 @@
 	<persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 	     <class>com.koitoer.springangular.model.Employee</class>
+	       <class>com.koitoer.springangular.model.VirtualSkuEntity</class>
 	     <properties>
 	       <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
 	       <property name="javax.persistence.jdbc.url" value="jdbc\:hsqldb\:mem\:spring-playground"/>
